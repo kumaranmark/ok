@@ -96,7 +96,7 @@ start_msg = """Hi {user}!
 `Click the below button to know how to use me!`"""
 start_buttons = [
     [Button.inline("How to use me ❓", data="helper")],
-    [Button.url("ᴄɪɴᴇᴍᴀ ʀᴏᴄᴋᴇʀ𝙨🎭™", "https://t.me/+SbfCX7vTNbozMGU1")],
+    [Button.url("ᴄɪɴᴇᴍᴀ ʀᴏᴄᴋᴇʀ𝙨🎭™", "https://t.me/+h6I9jdavCv5lNjU1")],
     [Button.url("ʟᴇᴀᴋᴇᴅ || ᴘʀɪᴍᴇ ᴍᴏᴠɪᴇ𝙨🎭™", "https://t.me/+m5SuGR2slNxkOThl")], 
 ]
 
@@ -258,9 +258,9 @@ async def approver(event):
         await bot.send_message(
             event.user_id,
             chat_welcome.format(name=who.first_name, chat=chat_.title, dn=dn),
-            buttons=[[Button.url(" Moives Updates", url="https://t.me/+SbfCX7vTNbozMGU1")],
+            buttons=[[Button.url(" Moives Updates", url="https://t.me/+h6I9jdavCv5lNjU1")],
                      [Button.url("👉OTT Releases👈", url="t.me/+m5SuGR2slNxkOThl")],
-                     [Button.url("✅Theatre release✅", url="https://t.me/+SbfCX7vTNbozMGU1")],])
+                     [Button.url("✅Theatre release✅", url="https://t.me/+h6I9jdavCv5lNjU1")],])
     with contextlib.suppress(errors.rpcerrorlist.UserAlreadyParticipantError):
         await bot(
             functions.messages.HideChatJoinRequestRequest(
