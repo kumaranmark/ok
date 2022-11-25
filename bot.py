@@ -20,7 +20,7 @@ try:
     bot_token = "5594276576:AAG1KWhuWE90HYcQSViKce71duk4ngy_XI4"
     REDIS_URI = "redis-10447.c283.us-east-1-4.ec2.cloud.redislabs.com:10447"
     REDIS_PASSWORD = "nCRViGpk4D7mgTQ6nuXBsweqD0dFHeOt"
-    AUTH = [int(i) for i in config("OWNERS").split(" ")]
+    AUTH = "1234465167"
 except Exception as e:
     log.exception(e)
     exit(1)
