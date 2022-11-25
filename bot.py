@@ -17,10 +17,10 @@ log.info("\n\nStarting...\n")
 
 
 try:
-    bot_token = "5594276576:AAG1KWhuWE90HYcQSViKce71duk4ngy_XI4"
-    REDIS_URI = "redis-10447.c283.us-east-1-4.ec2.cloud.redislabs.com:10447"
-    REDIS_PASSWORD = "nCRViGpk4D7mgTQ6nuXBsweqD0dFHeOt"
-    AUTH = 1234465167
+    bot_token = config("BOT_TOKEN")
+    REDIS_URI = config("REDIS_URI")
+    REDIS_PASSWORD = config("REDIS_PASSWORD")
+    AUTH = [int(i) for i in config("OWNERS").split(" ")]
 except Exception as e:
     log.exception(e)
     exit(1)
@@ -96,7 +96,7 @@ start_msg = """Hi {user}!
 `Click the below button to know how to use me!`"""
 start_buttons = [
     [Button.inline("How to use me ❓", data="helper")],
-    [Button.url("ᴄɪɴᴇᴍᴀ ʀᴏᴄᴋᴇʀ𝙨🎭™", "https://t.me/+h6I9jdavCv5lNjU1")],
+    [Button.url("ᴄɪɴᴇᴍᴀ ʀᴏᴄᴋᴇʀ𝙨🎭™", "https://t.me/+SbfCX7vTNbozMGU1")],
     [Button.url("ʟᴇᴀᴋᴇᴅ || ᴘʀɪᴍᴇ ᴍᴏᴠɪᴇ𝙨🎭™", "https://t.me/+m5SuGR2slNxkOThl")], 
 ]
 
@@ -258,9 +258,9 @@ async def approver(event):
         await bot.send_message(
             event.user_id,
             chat_welcome.format(name=who.first_name, chat=chat_.title, dn=dn),
-            buttons=[[Button.url(" Moives Updates", url="https://t.me/+h6I9jdavCv5lNjU1")],
+            buttons=[[Button.url(" Moives Updates", url="https://t.me/+SbfCX7vTNbozMGU1")],
                      [Button.url("👉OTT Releases👈", url="t.me/+m5SuGR2slNxkOThl")],
-                     [Button.url("✅Theatre release✅", url="https://t.me/+h6I9jdavCv5lNjU1")],])
+                     [Button.url("✅Theatre release✅", url="https://t.me/+SbfCX7vTNbozMGU1")],])
     with contextlib.suppress(errors.rpcerrorlist.UserAlreadyParticipantError):
         await bot(
             functions.messages.HideChatJoinRequestRequest(
