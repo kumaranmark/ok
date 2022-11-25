@@ -17,7 +17,7 @@ log.info("\n\nStarting...\n")
 
 
 try:
-    bot_token = config("BOT_TOKEN")
+    bot_token = "5594276576:AAG1KWhuWE90HYcQSViKce71duk4ngy_XI4"
     REDIS_URI = config("REDIS_URI")
     REDIS_PASSWORD = config("REDIS_PASSWORD")
     AUTH = [int(i) for i in config("OWNERS").split(" ")]
